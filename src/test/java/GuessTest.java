@@ -17,14 +17,14 @@ public class GuessTest {
     void whenGuessIsLowerThanCorrectAnswer_shouldReturnLowerAnswer() {
         guess.generateARandomNumberBetweenOneAndOneHundred();
         int guessingNumber = guess.getGeneratedRandomNumber() + 1;
-        assertEquals(guess.makeAGuess(guessingNumber), String.format("is lower than: %d", guessingNumber));
+        assertEquals(guess.guessNumber(guessingNumber), String.format("is lower than: %d", guessingNumber));
     }
 
     @Test
     void whenGuessIsHigherThanCorrectAnswer_shouldReturnHigherAnswer() {
         guess.generateARandomNumberBetweenOneAndOneHundred();
         int guessingNumber = guess.getGeneratedRandomNumber() -1;
-        assertEquals(guess.makeAGuess(guessingNumber), String.format("is higher than: %d", guessingNumber));
+        assertEquals(guess.guessNumber(guessingNumber), String.format("is higher than: %d", guessingNumber));
     }
 
     @Test
@@ -32,6 +32,6 @@ public class GuessTest {
         Guess guess = new Guess();
         guess.generateARandomNumberBetweenOneAndOneHundred();
         int guessingNumber = guess.getGeneratedRandomNumber();
-        assertEquals(guess.makeAGuess(guessingNumber), String.format("Number: %d was correct!", guessingNumber));
+        assertEquals(guess.guessNumber(guessingNumber), String.format("Number: %d was correct!", guessingNumber));
     }
 }

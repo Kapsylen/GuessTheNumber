@@ -2,7 +2,7 @@ package sesv;
 
 import java.util.Scanner;
 
-public class Main {
+public class GuessNumberGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Guess guess = new Guess();
@@ -15,7 +15,7 @@ public class Main {
             guessCounter++;
             userGuess = sc.nextInt();
             sc.nextLine();
-            result = guess.makeAGuess(userGuess);
+            result = guess.guessNumber(userGuess);
             System.out.println(result);
         } while(!result.equals(String.format("Number: %d was correct!", userGuess)));
         System.out.println(String.format("You guessed correct in: : %d attempts. ", guessCounter));

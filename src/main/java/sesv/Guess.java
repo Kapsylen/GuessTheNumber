@@ -4,13 +4,13 @@ public class Guess {
 
     private int generatedNumber;
 
-    public String makeAGuess(int i) {
-        if (i == generatedNumber) {
-            return String.format("Number: %d was correct!", i);
-        } else if (i < generatedNumber) {
-            return String.format("is higher than: %d", i);
+    public String guessNumber(int value) {
+        if (value == generatedNumber) {
+            return String.format("Number: %d was correct!", value);
+        } else if (value < generatedNumber) {
+            return String.format("is higher than: %d", value);
         } else
-            return String.format("is lower than: %d", i);
+            return String.format("is lower than: %d", value);
     }
 
     public void generateARandomNumberBetweenOneAndOneHundred() {
